@@ -1,5 +1,228 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
+  margin: 0 auto;
+  background-color: var(--backgroud-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  background-image: var(--cover-image);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: var(--accent-color);
+  top: 10px;
+  right: 10px;
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  align-items: center;
+  width: 25px;
+  height: 25px;
+  border-width: 0px 0px 1px 1px;
+  border-style: solid;
+  border-color: var(--accent-color);
+  bottom: 10px;
+  left: 10px;
+}
+
+.header__dark_rec {
+  position: absolute;
+  line-height: 25px;
+  color: var(--accent-color);
+  text-align: center;
+  left: 304px;
+  top: 10px;
+}
+
+
+.header__dark_rec::after {
+  content: "";
+  position: absolute;
+  inline-size: 9px;
+  block-size: 9px;
+  border-radius: 50%;
+  inset-block-start: 10px;
+  background: var(--accent-color);
+  box-shadow: 0px 0px 4px 2px var(--accent-color);
+  top: 8px;
+  left: 43px;
+}
+
+.header {
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  justify-items: end;
+  padding: 10px;
+  min-height: 668px;
+  min-width: 375px;
+  height: 100vh;
+}
+
+.header__theme-menu {
+  justify-items: end;
+  line-height: 1em;
+  text-align: center;
+}
+
+.header__theme-menu-list {
+  list-style: none;
+  text-transform: lowercase;
+  gap: 12px;
+  display: grid;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  border: none;
+  padding: 3px 12px;
+  cursor: pointer;
+  color: var(--accent-color);
+  text-transform: lowercase;
+}
+
+.header__theme-menu-button_active {
+  border: solid 1px var(--accent-color);
+}
+
+.header__title {
+  font-weight: 700;
+  font-size: 116px;
+  line-height: 82.5%;
+  color: var(--header-color);
+  text-shadow: 4px 4px 0px var(--accent-color);
+}
+
+.header__description {
+  font-weight: 700;
+  line-height: 130%;
+  color: var(--backgroud-color);
+  background-color: var(--accent-color);
+  inline-size: 100%;
+  justify-self: end;
+  align-self: center;
+}
+
+main {
+  padding: 40px 10px 40px 10px;
+  display: grid;
+  gap: 50px;
+}
+
+.section {
+  display: grid;
+  gap: 20px;
+}
+
+.special_images_section {
+  gap: 10px;
+}
+
+.section__title {
+font-weight: 700;
+line-height: 130%;
+font-size: var(--font-size);
+color: var(--accent-color);
+}
+
+.section__title-subtitle {
+  font-size: var(--font-size);
+  font-weight: 700;
+  line-height: 129%;
+  color: var(--backgroud-color);
+  background-color: var(--accent-color);
+}
+
+article {
+  font-size: var(--font-size);
+  font-weight: 400;
+  line-height: 130%;
+}
+
+.article__subtitles {
+  font-size: var(--font-size);
+  font-weight: 400;
+  line-height: 130%;
+  color: var(--backgroud-color);
+  background-color: var(--accent-color);
+}
+
+.text {
+  padding-top: 10px;
+}
+
+.link {
+  text-shadow: 2px 3px 0px var(--accent-color);
+  text-decoration-line: none;
+  color: var(--text-color);
+  display: inline-block;
+}
+
+.section__images {
+  display: grid;
+  gap: 10px;
+}
+
+.section__images-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+.footer {
+  display: grid;
+  min-height: 668px;
+  min-width: 375px;
+  grid-template-rows: 1fr;
+  padding: 10px;
+  height: 100vh;
+}
+
+.footer__title {
+  font-weight: 700;
+  font-size: 116px;
+  line-height: 82.5%;
+  color: var(--header-color);
+  text-shadow: 2px 2px 0px var(--accent-color);
+  justify-self: center;
+  padding-top: 28px;
+  align-content: center;
+}
+
+.footer::after {
+    content: "";
+    position: static;
+    width: 25px;
+    height: 25px;
+    border-width: 0px 0px 1px 1px;
+    border-style: solid;
+    border-color: var(--accent-color);
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-width: 1px 1px 0px 0px;
+  border-style: solid;
+  border-color: var(--accent-color);
+  right: 10px;
 }
