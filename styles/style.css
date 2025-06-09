@@ -14,35 +14,6 @@
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
 }
 
-
-
-
-/* .header::after {
-  content: "";
-  position: absolute;
-  align-items: center;
-  width: 25px;
-  height: 25px;
-  border-width: 1px 1px 0px 0px;
-  border-style: solid;
-  border-color: var(--accent-color);
-  top: 10px;
-  right: 10px;
-} */
-
-/* .header::before {
-  content: "";
-  position: absolute;
-  align-items: center;
-  width: 25px;
-  height: 25px;
-  border-width: 0px 0px 1px 1px;
-  border-style: solid;
-  border-color: var(--accent-color);
-  bottom: 10px;
-  left: 10px;
-} */
-
 .header__dark_rec {
   position: absolute;
   line-height: 25px;
@@ -51,7 +22,6 @@
   right: 38px;
   top: 10px;
 }
-
 
 .header__dark_rec::after {
   content: "";
@@ -95,7 +65,6 @@
 
 }
 
-
 .decorated-zone:after {
   content: "";
   position: absolute;
@@ -107,7 +76,6 @@
   border-color: var(--accent-color);
   bottom: var(--decorated-zone-padding);
   left: var(--decorated-zone-padding);
-
 }
 
 .header__theme-menu {
@@ -246,27 +214,6 @@ article {
   align-content: center;
 }
 
-/* .footer::after {
-    content: "";
-    position: static;
-    width: 25px;
-    height: 25px;
-    border-width: 0px 0px 1px 1px;
-    border-style: solid;
-    border-color: var(--accent-color);
-}
-
-.footer::before {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-width: 1px 1px 0px 0px;
-  border-style: solid;
-  border-color: var(--accent-color);
-  right: 10px;
-} */
-
 @media (width >= 768px) {
   :root {
     --header-padding: 20px;
@@ -342,6 +289,35 @@ article {
   .footer__title {
     font-size: 120px;
   }
+}
 
+@media (width >= 1024px) {
+  .header__theme-menu-list {
+    grid-auto-flow: column;
+  }
+
+  .header__theme-menu {
+    justify-self: center;
+    align-self: start;
+  }
+
+  .header__title,
+  .footer__title {
+    font-size: 157px;
+  }
+  
+  .section_first,
+  .section_third {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .section_first .articles,
+  .section_third .articles {
+    grid-column: span 2;
+  }
+
+  .section_second .articles {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
