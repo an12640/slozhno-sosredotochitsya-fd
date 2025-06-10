@@ -20,29 +20,13 @@
   --cover-image: url(../images/cover-image-light.png);
   --section-title-color: #353430;
   --section-subtitle-color: #353430;
-  --menu-hover-color: rgba(50, 49, 45, 0.4);
-  --link-focus-color: #F1B2CE;
-}
-
-.theme-light .page {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-  --accent-color: #FF8DCB;
-  --decorated-zone-color: #353430;
-  --rec-color: transparent;
-  --menu-color: #353430;
-  --header-color: #FFC2E6;
-  --background-color: #FFF1F7;
-  --description-text-color: #353430;
-  --text-color: #353430;
-  --cover-image: url(../images/cover-image-light.png);
-  --section-title-color: #353430;
-  --section-subtitle-color: #353430;
-  --menu-hover-color: rgba(50, 49, 45, 0.4);
-  --link-focus-color: #F1B2CE;
+  --menu-hover-color: #353430;
+  --link-focus-color: #353430;
+  --button-hover-color: rgba(50, 49, 45, 0.4);
 }
 
 @media (prefers-color-scheme: light) {
-  .page {
+  .root {
     --accent-color: #FF8DCB;
     --decorated-zone-color: #353430;
     --rec-color: transparent;
@@ -54,7 +38,8 @@
     --cover-image: url(../images/cover-image-light.png);
     --section-title-color: #353430;
     --section-subtitle-color: #353430;
-    --menu-hover-color: rgba(50, 49, 45, 0.4);
-    --link-focus-color: #F1B2CE;
+    --menu-hover-color: #353430;
+    --link-focus-color: #353430;
+    --button-hover-color: rgba(50, 49, 45, 0.4);
   }
 }
