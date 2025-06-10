@@ -111,6 +111,7 @@
 
 .header__theme-menu-button_active {
   outline: solid 1px var(--menu-color);
+  pointer-events: none;
 }
 
 .header__title {
