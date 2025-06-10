@@ -43,7 +43,6 @@
   background: var(--rec-color);
   inline-size: 9px;
   block-size: 9px;
-  inset-block-start: 10px;
 }
 
 .decorated-zone {
